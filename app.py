@@ -1,4 +1,3 @@
-# encoding: utf-8
 from flask import Flask, request, abort
 
 from linebot import (
@@ -13,11 +12,11 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-# ¶ñ¤J§Aªº message api ¸ê°T
+# å¡«å…¥ä½ çš„ message api è³‡è¨Š
 line_bot_api = LineBotApi('TxaoPD1pU5bY0mgspcgaKPDGRFmWAf6PWZXBrnZMVNMG8AwpozGVPfI/2wT22KUoy5NX9vt6YlmkcqdJtgqhWuPXu8zo3p0NY9N7/+F3UyhrTcI9G4WqRO9yz+P4Wxl3vNxzgg/iLhMiR/01TPjFnQdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('a08b90bfde9ee77cad4416f5eb49e040')
 
-# ³]©w§A±µ¦¬°T®§ªººô§}¡A¦p https://YOURAPP.herokuapp.com/callback
+# è¨­å®šä½ æ¥æ”¶è¨Šæ¯çš„ç¶²å€ï¼Œå¦‚ https://YOURAPP.herokuapp.com/callback
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
